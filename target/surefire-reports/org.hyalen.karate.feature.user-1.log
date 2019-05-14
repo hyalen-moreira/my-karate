@@ -1,0 +1,19 @@
+18:14:58.488 request:
+1 > GET http://localhost:8080/api/karate-swagger/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+
+18:14:58.577 response time in milliseconds: 85.26
+1 < 200
+1 < Content-Length: 14
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Sat, 11 May 2019 22:14:58 GMT
+Hyalen Moreira
+
+
+d after 2265 milliseconds for URL: http://localhost:8080/api/karate-swagger/users
+18:05:10.471 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
