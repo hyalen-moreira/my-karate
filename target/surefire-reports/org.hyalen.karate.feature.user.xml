@@ -1,0 +1,40 @@
+<testsuite failures="0" name="org/hyalen/karate/feature/user.feature" skipped="0" tests="3" time="1.720366">
+  <testcase classname="org.hyalen.karate.feature.user" name="Fetch all users" time="1.641285">
+    <system-out>* url mockServerUrl ....................................................... passed
+Given path 'users' ........................................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And print 'CALIFORNIA ---&gt;' + path ........................................ passed
+And match $ == {name:'Hyalen Moreira'} .................................... passed</system-out>
+  </testcase>
+  <testcase classname="org.hyalen.karate.feature.user" name="Fetch user by index" time="0.044787">
+    <system-out>* url mockServerUrl ....................................................... passed
+Given path 'users' ........................................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And print 'CALIFORNIA ---&gt;' + path ........................................ passed
+And match $ == {name:'Hyalen Moreira'} .................................... passed
+* url mockServerUrl ....................................................... passed
+Given path 'users/1' ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match $ == {index:'1'} ................................................ passed</system-out>
+  </testcase>
+  <testcase classname="org.hyalen.karate.feature.user" name="Fetch all users" time="0.034294">
+    <system-out>* url mockServerUrl ....................................................... passed
+Given path 'users' ........................................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And print 'CALIFORNIA ---&gt;' + path ........................................ passed
+And match $ == {name:'Hyalen Moreira'} .................................... passed
+* url mockServerUrl ....................................................... passed
+Given path 'users/1' ...................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match $ == {index:'1'} ................................................ passed
+* url mockServerUrl ....................................................... passed
+Given path 'dummy' ........................................................ passed
+When method GET ........................................................... passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

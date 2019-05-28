@@ -1,0 +1,11 @@
+11:32:03.386 ---> I am here 
+11:32:03.392 request:
+1 > GET http://localhost:65483/dummy
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:65483
+1 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+
+11:32:03.404 response time in milliseconds: 12.22
+1 < 404
+

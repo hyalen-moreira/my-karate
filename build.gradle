@@ -4,15 +4,49 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'idea'
+idea {
+	module {
+		outputDir file('build/classes/java/main')
+		testOutputDir file('build/classes/java/test')
+	}
+}
 
 group = 'org.hyalen'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+bootRun {
+	systemProperties = System.properties
+}
+
 repositories {
 	mavenCentral()
 	maven { url 'https://repo.spring.io/snapshot' }
 	maven { url 'https://repo.spring.io/milestone' }
+}
+
+sourceSets {
+	test {
+		java {
+			// Excluding UIRunner files as these require the javafx libraries
+			// which are not shipped with OpenJDK. These UIRunner classes are
+			// classes that allow developers to run/debug karate tests via a UI
+			// and as such are not required for headless runs on jenkins server
+			// but can run happily via IDE of the developer without needed to be
+			// compiled by gradle.
+			srcDir file('src/test/java')
+			exclude '**/*UiRunner*.java'
+		}
+		resources {
+			// Using recommended karate project layout where karate feature files
+			// and associated javascript resources sit in same /test/java folders
+			// as their java counterparts.
+			srcDir file('src/test/java')
+			exclude '**/*.java'
+			output.resourcesDir = "build/classes/java/test"
+		}
+	}
 }
 
 dependencies {

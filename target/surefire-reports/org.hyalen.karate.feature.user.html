@@ -168,35 +168,111 @@
 </img><div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">Fetch all users</span>
+<span class="scenario-keyword">Scenario: [1:6]</span><span class="scenario-name">Fetch all users</span>
 </div>
 <div class="step-row">
-<div class="step-cell passed">* url 'http://localhost:8080/api/karate-swagger'</div>
-<div class="time-cell passed">0.002857</div>
+<div class="step-cell passed">* url mockServerUrl</div>
+<div class="time-cell passed">0.000124</div>
 </div>
+<div class="preformatted">11:32:01.868 ---&gt; I am here</div>
 <div class="step-row">
-<div class="step-cell passed">Given path '/users'</div>
-<div class="time-cell passed">0.003064</div>
+<div class="step-cell passed">Given path 'users'</div>
+<div class="time-cell passed">0.003528</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">1.34413</div>
+<div class="time-cell passed">1.351716</div>
 </div>
-<div class="preformatted">18:14:58.488 request:
-1 &gt; GET http://localhost:8080/api/karate-swagger/users
+<div class="preformatted">11:32:02.865 request:
+1 &gt; GET http://localhost:65483/users
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: localhost:8080
+1 &gt; Host: localhost:65483
 1 &gt; User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
 
-18:14:58.577 response time in milliseconds: 85.26
+11:32:03.253 response time in milliseconds: 383.33
 1 &lt; 200
-1 &lt; Content-Length: 14
-1 &lt; Content-Type: application/json;charset=UTF-8
-1 &lt; Date: Sat, 11 May 2019 22:14:58 GMT
-Hyalen Moreira</div>
+1 &lt; Content-Type: application/json
+{"name":"Hyalen Moreira"}</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000033</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And print 'CALIFORNIA ---&gt;' + path</div>
+<div class="time-cell passed">0.01054</div>
+</div>
+<div class="preformatted">11:32:03.268 [print]</div>
+<div class="step-row">
+<div class="step-cell passed">And match $ == {name:'Hyalen Moreira'}</div>
+<div class="time-cell passed">0.003372</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading">
+<span class="scenario-keyword">Scenario: [2:13]</span><span class="scenario-name">Fetch user by index</span>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* url mockServerUrl</div>
+<div class="time-cell passed">0.000029</div>
+</div>
+<div class="preformatted">11:32:03.316 ---&gt; I am here</div>
+<div class="step-row">
+<div class="step-cell passed">Given path 'users/1'</div>
+<div class="time-cell passed">0.007929</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method GET</div>
+<div class="time-cell passed">0.040516</div>
+</div>
+<div class="preformatted">11:32:03.327 request:
+1 &gt; GET http://localhost:65483/users/1
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:65483
+1 &gt; User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+
+11:32:03.366 response time in milliseconds: 37.34
+1 &lt; 200
+1 &lt; Content-Type: application/json
+{"index":"1"}</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000016</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match $ == {index:'1'}</div>
+<div class="time-cell passed">0.000361</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading">
+<span class="scenario-keyword">Scenario: [3:19]</span><span class="scenario-name">Fetch all users</span>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* url mockServerUrl</div>
+<div class="time-cell passed">0.000022</div>
+</div>
+<div class="preformatted">11:32:03.386 ---&gt; I am here</div>
+<div class="step-row">
+<div class="step-cell passed">Given path 'dummy'</div>
+<div class="time-cell passed">0.002841</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method GET</div>
+<div class="time-cell passed">0.015012</div>
+</div>
+<div class="preformatted">11:32:03.392 request:
+1 &gt; GET http://localhost:65483/dummy
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:65483
+1 &gt; User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+
+11:32:03.404 response time in milliseconds: 12.22
+1 &lt; 404</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 404</div>
 <div class="time-cell passed">0.000015</div>
 </div>
 </div>

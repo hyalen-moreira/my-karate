@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import java.io.File;
 
 @RunWith(Karate.class)
-@KarateOptions(features = "C:\\Users\\hyalen.moreira\\workspace\\karate\\src\\test\\resources\\org\\hyalen\\karate\\feature\\user.feature")
+@KarateOptions(features = "classpath:org/hyalen/karate/feature/user.feature")
 public class UserRunner {
     private static FeatureServer server;
 

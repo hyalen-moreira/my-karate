@@ -15,16 +15,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- *
- * @author pthomas3
- */
 @KarateOptions(tags = "~@ignore")
 public class MockServerTest {
 
     private static FeatureServer server;
-
-    public static final byte[] testBytes = new byte[]{15, 98, -45, 0, 0, 7, -124, 75, 12, 26, 0, 9};
 
     @BeforeClass
     public static void beforeClass() {
@@ -46,9 +40,10 @@ public class MockServerTest {
     private static void generateReport(String karateOutputPath) {
         Collection<File> jsonFiles = org.apache.commons.io.FileUtils.listFiles(new File(karateOutputPath), new String[]{"json"}, true);
         List<String> jsonPaths = new ArrayList(jsonFiles.size());
-        for (File file : jsonFiles) {
+
+        for (File file : jsonFiles)
             jsonPaths.add(file.getAbsolutePath());
-        }
+
         Configuration config = new Configuration(new File("target"), "mock");
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();

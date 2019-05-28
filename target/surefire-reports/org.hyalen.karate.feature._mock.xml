@@ -1,0 +1,19 @@
+<testsuite failures="0" name="org/hyalen/karate/feature/_mock.feature" skipped="0" tests="3" time="0.002702">
+  <testcase classname="org.hyalen.karate.feature._mock" name="pathMatches('/users')" time="0.000482">
+    <system-out>* def responseStatus = 200 ................................................ passed
+* def response = { name: 'Hyalen Moreira' } ............................... passed</system-out>
+  </testcase>
+  <testcase classname="org.hyalen.karate.feature._mock" name="pathMatches('/users/{index}')" time="0.002033">
+    <system-out>* def responseStatus = 200 ................................................ passed
+* def response = { name: 'Hyalen Moreira' } ............................... passed
+* def responseStatus = 200 ................................................ passed
+* def response = { index: '#(pathParams.index)' } ......................... passed</system-out>
+  </testcase>
+  <testcase classname="org.hyalen.karate.feature._mock" name="3" time="0.000187">
+    <system-out>* def responseStatus = 200 ................................................ passed
+* def response = { name: 'Hyalen Moreira' } ............................... passed
+* def responseStatus = 200 ................................................ passed
+* def response = { index: '#(pathParams.index)' } ......................... passed
+* def responseStatus = 404 ................................................ passed</system-out>
+  </testcase>
+</testsuite>
