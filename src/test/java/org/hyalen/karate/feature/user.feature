@@ -22,3 +22,10 @@ Feature: User API
     Then status 404
 #    And print 'CALIFORNIA --->' + path
 #    And match $ == {name:'Hyalen Moreira'}
+
+  Scenario: Create an user
+    Given path 'users'
+    And request { userId : '111'}
+    When method POST
+    Then status 201
+    And match response == {id : '111'}

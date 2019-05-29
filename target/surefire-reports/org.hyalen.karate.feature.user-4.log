@@ -1,0 +1,19 @@
+19:03:52.262 ---> I am here 
+19:03:52.278 request:
+1 > POST http://localhost:61096/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 16
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:61096
+1 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+{"userId":"111"}
+
+19:03:52.309 response time in milliseconds: 29.29
+1 < 201
+1 < Content-Type: application/json
+{"id":"111"}
+
+n Moreira"}
+
+18:58:13.793 status code was: 200, expected: 201, response time: 17, url: http://localhost:60838/users, response: {"name":"Hyalen Moreira"}

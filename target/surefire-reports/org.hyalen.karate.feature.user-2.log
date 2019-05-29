@@ -1,13 +1,34 @@
-11:32:03.316 ---> I am here 
-11:32:03.327 request:
-1 > GET http://localhost:65483/users/1
+19:03:52.193 ---> I am here 
+19:03:52.193 request:
+1 > GET http://localhost:61096/users/1
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Host: localhost:65483
+1 > Host: localhost:61096
 1 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
 
-11:32:03.366 response time in milliseconds: 37.34
+19:03:52.224 response time in milliseconds: 29.53
 1 < 200
 1 < Content-Type: application/json
 {"index":"1"}
 
+n: Keep-Alive
+2 > Host: localhost:60300
+2 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+
+18:42:52.438 request:
+3 > GET http://localhost:60300/users/1
+3 > Accept-Encoding: gzip,deflate
+3 > Connection: Keep-Alive
+3 > Host: localhost:60300
+3 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+
+18:42:52.458 request:
+4 > GET http://localhost:60300/users/1
+4 > Accept-Encoding: gzip,deflate
+4 > Connection: Keep-Alive
+4 > Host: localhost:60300
+4 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+
+18:42:52.473 org.apache.http.NoHttpResponseException: localhost:60300 failed to respond, http call failed after 15 milliseconds for URL: http://localhost:60300/users/1
+18:42:52.474 http request failed: 
+org.apache.http.NoHttpResponseException: localhost:60300 failed to respond

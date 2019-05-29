@@ -1,14 +1,14 @@
-11:32:01.868 ---> I am here 
-11:32:02.865 request:
-1 > GET http://localhost:65483/users
+19:03:51.123 ---> I am here 
+19:03:51.935 request:
+1 > GET http://localhost:61096/users
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Host: localhost:65483
+1 > Host: localhost:61096
 1 > User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
 
-11:32:03.253 response time in milliseconds: 383.33
+19:03:52.162 response time in milliseconds: 223.41
 1 < 200
 1 < Content-Type: application/json
 {"name":"Hyalen Moreira"}
 
-11:32:03.268 [print]
+19:03:52.177 [print]

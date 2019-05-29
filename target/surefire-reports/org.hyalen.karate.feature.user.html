@@ -172,40 +172,40 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url mockServerUrl</div>
-<div class="time-cell passed">0.000124</div>
+<div class="time-cell passed">0.000077</div>
 </div>
-<div class="preformatted">11:32:01.868 ---&gt; I am here</div>
+<div class="preformatted">19:03:29.025 ---&gt; I am here</div>
 <div class="step-row">
 <div class="step-cell passed">Given path 'users'</div>
-<div class="time-cell passed">0.003528</div>
+<div class="time-cell passed">0.002548</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">1.351716</div>
+<div class="time-cell passed">1.066088</div>
 </div>
-<div class="preformatted">11:32:02.865 request:
-1 &gt; GET http://localhost:65483/users
+<div class="preformatted">19:03:29.840 request:
+1 &gt; GET http://localhost:61061/users
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: localhost:65483
+1 &gt; Host: localhost:61061
 1 &gt; User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
 
-11:32:03.253 response time in milliseconds: 383.33
+19:03:30.101 response time in milliseconds: 257.28
 1 &lt; 200
 1 &lt; Content-Type: application/json
 {"name":"Hyalen Moreira"}</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000033</div>
+<div class="time-cell passed">0.000021</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And print 'CALIFORNIA ---&gt;' + path</div>
-<div class="time-cell passed">0.01054</div>
+<div class="time-cell passed">0.009765</div>
 </div>
-<div class="preformatted">11:32:03.268 [print]</div>
+<div class="preformatted">19:03:30.112 [print]</div>
 <div class="step-row">
 <div class="step-cell passed">And match $ == {name:'Hyalen Moreira'}</div>
-<div class="time-cell passed">0.003372</div>
+<div class="time-cell passed">0.002587</div>
 </div>
 </div>
 <div class="scenario">
@@ -214,35 +214,35 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url mockServerUrl</div>
-<div class="time-cell passed">0.000029</div>
+<div class="time-cell passed">0.000026</div>
 </div>
-<div class="preformatted">11:32:03.316 ---&gt; I am here</div>
+<div class="preformatted">19:03:30.135 ---&gt; I am here</div>
 <div class="step-row">
 <div class="step-cell passed">Given path 'users/1'</div>
-<div class="time-cell passed">0.007929</div>
+<div class="time-cell passed">0.003509</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">0.040516</div>
+<div class="time-cell passed">0.027066</div>
 </div>
-<div class="preformatted">11:32:03.327 request:
-1 &gt; GET http://localhost:65483/users/1
+<div class="preformatted">19:03:30.147 request:
+1 &gt; GET http://localhost:61061/users/1
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: localhost:65483
+1 &gt; Host: localhost:61061
 1 &gt; User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
 
-11:32:03.366 response time in milliseconds: 37.34
+19:03:30.172 response time in milliseconds: 24.58
 1 &lt; 200
 1 &lt; Content-Type: application/json
 {"index":"1"}</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000016</div>
+<div class="time-cell passed">0.000013</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match $ == {index:'1'}</div>
-<div class="time-cell passed">0.000361</div>
+<div class="time-cell passed">0.000299</div>
 </div>
 </div>
 <div class="scenario">
@@ -251,29 +251,73 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">* url mockServerUrl</div>
-<div class="time-cell passed">0.000022</div>
+<div class="time-cell passed">0.000021</div>
 </div>
-<div class="preformatted">11:32:03.386 ---&gt; I am here</div>
+<div class="preformatted">19:03:30.184 ---&gt; I am here</div>
 <div class="step-row">
 <div class="step-cell passed">Given path 'dummy'</div>
-<div class="time-cell passed">0.002841</div>
+<div class="time-cell passed">0.003035</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">0.015012</div>
+<div class="time-cell passed">0.022057</div>
 </div>
-<div class="preformatted">11:32:03.392 request:
-1 &gt; GET http://localhost:65483/dummy
+<div class="preformatted">19:03:30.190 request:
+1 &gt; GET http://localhost:61061/dummy
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: localhost:65483
+1 &gt; Host: localhost:61061
 1 &gt; User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
 
-11:32:03.404 response time in milliseconds: 12.22
+19:03:30.209 response time in milliseconds: 19.12
 1 &lt; 404</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 404</div>
-<div class="time-cell passed">0.000015</div>
+<div class="time-cell passed">0.000013</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading">
+<span class="scenario-keyword">Scenario: [4:26]</span><span class="scenario-name">Create an user</span>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* url mockServerUrl</div>
+<div class="time-cell passed">0.000021</div>
+</div>
+<div class="preformatted">19:03:30.223 ---&gt; I am here</div>
+<div class="step-row">
+<div class="step-cell passed">Given path 'users'</div>
+<div class="time-cell passed">0.000193</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And request { userId : '111'}</div>
+<div class="time-cell passed">0.000283</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method POST</div>
+<div class="time-cell passed">0.038815</div>
+</div>
+<div class="preformatted">19:03:30.233 request:
+1 &gt; POST http://localhost:61061/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 16
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:61061
+1 &gt; User-Agent: Apache-HttpClient/4.5.8 (Java/1.8.0_201)
+{"userId":"111"}
+
+19:03:30.263 response time in milliseconds: 28.77
+1 &lt; 201
+1 &lt; Content-Type: application/json
+{"id":"111"}</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 201</div>
+<div class="time-cell passed">0.000008</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match response == {id : '111'}</div>
+<div class="time-cell passed">0.000329</div>
 </div>
 </div>
 </div>
